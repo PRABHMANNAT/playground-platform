@@ -1,0 +1,29 @@
+{
+  "name": "playground-platform",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "packages/contracts"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w apps/web",
+    "build": "npm run build -w apps/web",
+    "typecheck": "npm run typecheck -w apps/web",
+    "db:local": "node infra/local-postgres.mjs",
+    "contracts": "openapi-typescript http://127.0.0.1:8000/openapi.json -o packages/contracts/src/generated.ts",
+    "test:e2e": "playwright test",
+    "local": "node infra/dev.mjs",
+    "launcher:check": "node tests/launcher_probe.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.64.0",
+    "embedded-postgres": "18.4.0-beta.17",
+    "openapi-typescript": "7.13.0",
+    "prettier": "3.9.10"
+  },
+  "engines": {
+    "node": ">=20.9"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "realm": "playground",
+  "enabled": true,
+  "displayName": "Playground Local",
+  "registrationAllowed": false,
+  "clients": [
+    {
+      "clientId": "playground-web",
+      "name": "Playground Web",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "secret": "local-client-only",
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "redirectUris": [
+        "http://localhost:3000/auth/callback",
+        "http://127.0.0.1:3000/auth/callback"
+      ],
+      "webOrigins": [
+        "http://localhost:3000",
+        "http://127.0.0.1:3000"
+      ],
+      "attributes": {
+        "pkce.code.challenge.method": "S256"
+      },
+      "protocolMappers": [
+        {
+          "name": "playground-audience",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-audience-mapper",
+          "config": {
+            "included.client.audience": "playground-web",
+            "access.token.claim": "true",
+            "id.token.claim": "true"
+          }
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "local-alice",
+      "username": "alice",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "Alex",
+      "lastName": "Chen",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "playground",
+          "temporary": false
+        }
+      ],
+      "email": "alice@example.test",
+      "requiredActions": []
+    },
+    {
+      "id": "local-bob",
+      "username": "bob",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "Blair",
+      "lastName": "Singh",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "playground",
+          "temporary": false
+        }
+      ],
+      "email": "bob@example.test",
+      "requiredActions": []
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+fastapi
+pydantic>=2,<3
+sqlalchemy>=2,<3
+alembic
+psycopg[binary]
+uvicorn
+httpx
+PyJWT[crypto]
+python-multipart
+boto3
+pytest

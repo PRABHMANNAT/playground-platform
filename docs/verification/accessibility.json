@@ -1,0 +1,42 @@
+[
+  {
+    "width": 1440,
+    "view": "Overview",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "view": "Test Plans",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "view": "Theatre",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "view": "Settings",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "view": "Overview",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "view": "Test Plans",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "view": "Theatre",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "view": "Settings",
+    "violations": []
+  }
+]

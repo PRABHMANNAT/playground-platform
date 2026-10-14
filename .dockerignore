@@ -1,0 +1,10 @@
+node_modules
+**/node_modules
+**/.next
+.venv
+.local
+.git
+docs/verification
+test-results
+playwright-report
+.env*
